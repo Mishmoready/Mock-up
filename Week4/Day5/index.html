@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Shopping List</h1>
+    <input type="text" id="item" placeholder="Item. e.g. Tomato" /><span></span>
+      x</span>
+    <input type="number" id="qty" placeholder="Quantity. e.g. 1" />
+    <button onclick="addItem()">Add to List</button>
+    <p id="shopping-list-display"></p>
+    <hr/>
+
+    <h1>Shopping Basket</h1>
+    <p>Enter all the products you've put into your shopping basket, separated by commas, to see if you've forgotten anything.</p>
+    <input type="text" id="shopping-basket" placeholder="e.g. tomato, eggs, milk"/>
+    <input type="button" value="add item(s) to basket" onclick="addToBasket ();" >
+    <p id="forgotten-items-display"></p>
+
+    <script>
+    const shoppingList = []
+        function addItem(){
+            const itemToAdd= {
+                item: document.getElementById('item').value,
+                quantity: document.getElementById('qty').value,
+            }
+            console.log(itemToAdd)
+            shoppingList.push(itemToAdd)
+            displayListItems()
+
+        }
+        function displayListItems()
+        {
+            const shoppingListDisplay = document.getElementById('shopping-list-display')
+            shoppingListDisplay.innerHTML=''
+
+            for(let shoppingListEl of shoppingList){
+
+                shoppingListDisplay.innerHTML += 
+                `${shoppingListEl.item} x ${shoppingListEl.quantity} <span onclick='deleteItem(${shoppingList.indexOf(shoppingListEl)})' style="cursor:pointer">&#10062</span><br/>`
+            }
+        }
+        function deleteItem(itemToDelete){
+            shoppingList.splice(itemToDelete, 1)
+            displayListItems()
+        }
+        function addToBasket(){
+           const basket = document.getElementById("shopping-basket").value.toLowerCase().split(',')
+           console.log(basket)
+
+           const itemsStillToBuy = shoppingList.filter(function(shoppingListEl){
+            console.log(shoppingListEl)
+            return !basket.includes(shoppingListEl.item.toLowerCase());
+           })
+           //filter()...includes()
+           console.log(itemsStillToBuy);
+           //show the forgotten items list
+           if(itemsStillToBuy.length===0){
+            document.getElementById("forgotten-items-display").textContent="You've got em all!🤔"
+           }else{
+            document.getElementById("forgotten-items-display").innerHTML= "Hold up, you're missing something <br/> 🤷‍♀️🤷‍♂️"
+           }
+           itemsStillToBuy.forEach(function (item){
+            document.getElementById("forgotten-items-display").innerHTML+=`${item.item} x ${item.quantity} <br/>`;
+           }); 
+          }
+        
+        
+    </script>
+  </body>
+</html>

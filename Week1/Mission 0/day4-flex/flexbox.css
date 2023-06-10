@@ -1,0 +1,41 @@
+.container {
+  background: bisque;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.flexbox {
+  width: 70px;
+  height: 50px;
+}
+.box1 {
+  background: #ff7777;
+}
+.box2 {
+  background: #ffc477;
+}
+.box3 {
+  background: #fff677;
+}
+.box4 {
+  background: #dbff77;
+}
+.box5 {
+  background: #7cff77;
+}
+.box6 {
+  background: #77ffed;
+}
+.box7 {
+  background: #77a2ff;
+}
+.box8 {
+  background: #ab77ff;
+}
+.box9 {
+  background: #f477ff;
+}
+.box10 {
+  background: #ff6d6d;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flex</title>
+
+    <!-- internal CSS -->
+    <style>
+        #main {
+            display: flex;
+            background-color: green;
+            align-self: center;
+            /* vertical-align: auto; */
+            align-items: flex-end;
+            /* Horizontal Alignment */
+            justify-content: space-evenly;
+            gap: 50px;
+            /* flex-direction: column; */
+            flex-wrap: wrap;
+        }
+
+        .child-el1 {
+            background-color: aqua;
+            height: 100px;
+        }
+
+        .child-el2 {
+            background-color: rebeccapurple;
+        }
+
+        .child-el3 {
+            background-color: royalblue;
+        }
+
+        .child-el4 {
+            background-color: red;
+        }
+
+        .child-el5 {
+            background-color: grey;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="main">
+    <div class="child-el1">My first box</div>
+    <div class="child-el2">My second box</div>
+    <div class="child-el3">My third box</div>
+    <div class="child-el4">My fourth box</div>
+    <div class="child-el5">My fifth box</div>
+    </div>
+    
+</body>
+</html>

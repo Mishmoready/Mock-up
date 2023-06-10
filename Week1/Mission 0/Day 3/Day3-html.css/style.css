@@ -1,0 +1,21 @@
+h1 {
+    font-size: 90px;
+}
+
+p {
+    margin: 60px 0px;
+    color: rgb(105, 151, 84);
+}
+
+.intro {
+    font-family: "Tahoma";
+}
+/* id for my-thinking id attribute */
+#my-thinking {
+    font-weight: 700;
+    background-color: cornflowerblue;
+}
+
+.Thoughts {
+    background-color: yellowgreen
+}

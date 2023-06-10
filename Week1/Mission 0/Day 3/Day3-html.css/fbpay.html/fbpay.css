@@ -1,0 +1,77 @@
+body {
+    font-family: "Tahoma";
+}
+/* Customising the section id */
+#home {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+/* Customising the word content */
+#content {
+margin: 40px 100px;
+width: 35%;
+}
+/* Customising style of the content images */
+#image {
+    /* width: 65%;
+    height: 300px;
+    margin: 0px 100px;
+    background-color: bisque; */
+    background-image: url(https://flipweb.org/wp-content/uploads/2019/11/Facebook-Pay.png);
+    width: 65%;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin: 0px 100px;
+}
+/* Creating flex attributes */
+nav > ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 50px 100px;
+}
+/* Creating Margins/Borders for the links */
+.nav-link {
+    list-style: none;
+    background-color: #d8e4ef;
+    margin: 2px 5px;
+    padding: 8px 15px;
+    text-align: center;
+}
+/* Creating a pseudo-class style (hovering effect with mouse)... */
+.nav-link:hover {
+    background-color: #396ee1;
+    color: white
+}
+/* follow up on "facebook pay" font sizing */
+h1 {
+    font-size: 40;
+}
+/* text created underneath main title */
+p {
+    margin: 35px 0px;
+}
+/* Creating a button simillar to nav class button */
+.btn {
+    background-color: #d8e4ef;
+    text-align: center;
+    margin: 20px 0px;
+    padding: 14px 25px;
+    width: 200px;
+    display: block;
+    border: none;
+}
+/* Button created, styled, and hovered effect. This is under the title and paragraph tags */
+.btn:hover {
+    background-color: #396ee1;
+    color: white;
+}
+
+/* a tags being styled (facebook word has under line) */
+a {
+    /* color: burlywood; */
+    text-decoration: none;
+}

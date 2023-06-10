@@ -1,0 +1,60 @@
+input {
+    width: 40%;
+}
+
+/* adding in more selectors from the html code */
+label, h1 {
+    font-family: tahoma, sans-serif;
+}
+
+input[type=text], input[type=email] {
+    padding: 2px 2px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid purple;
+}
+
+input[type=radio] {
+    width: 20px;
+}
+
+textarea {
+    border: 2px solid purple;
+}
+
+input[type=submit]{
+    background-color: purple;
+    color: white;
+    width: 30%;
+}
+
+input[type=radio] + label {
+    color: purple;
+}
+
+@keyframes example {
+    0%  {background-color:red; left: 0px; top: 0px;}
+    25% {background-color: yellow; left: 200px; top: 0px;}
+    50% {background-color: blue; left: 200px; top: 200px;}
+    75% {background-color: green; left: 0px; top: 200px;}
+    100% {background-color: red; left: 0px; top: 0px;}
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-iteration-count: 3;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+/* div:hover {
+    width: 200px;
+    height: 200px;
+} */
